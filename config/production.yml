@@ -1,0 +1,11 @@
+email:
+  transporter:
+    host: production_host
+    port: production_port
+    secure: true_or_false
+    auth:
+      user: auth_production_user
+      pass: auth_production_pass
+
+payment:
+  stripe_key: your_stripe_production_key
