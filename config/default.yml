@@ -11,9 +11,6 @@ email:
     host: smtp.ethereal.email
     port: 587
     secure: false
-    auth:
-      user: nzic56ih6nqak3jv@ethereal.email
-      pass: qsMJ7hN83JQXXWjsNm
 
   theme: salted
   template:
@@ -134,6 +131,3 @@ email:
             color: '#22BC66'
             text: 'See more details'
             link: ' https://hyperping.io/2734'
-
-payment:
-  stripe_key: your_stripe_development_key

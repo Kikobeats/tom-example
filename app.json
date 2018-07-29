@@ -1,0 +1,29 @@
+{
+  "name": "tom",
+  "description": "A tom microservice example",
+  "repository": "https://github.com/kikobeats/tom-example",
+  "logo": "https://tom.js.org/static/logo-color.png",
+  "keywords": ["node", "tom", "microservice"],
+  "env": {
+    "TOM_STRIPE_KEY": {
+      "description": "The stripe key of your account, see https://dashboard.stripe.com/account/apikeys",
+      "required": true
+    },
+    "TOM_EMAIL_USER": {
+      "description": "Your SMTP authentication user credential.",
+      "required": true
+    },
+    "TOM_EMAIL_PASSWORD": {
+      "description": "Your SMTP authentication password credential.",
+      "required": true
+    },
+    "TOM_ALLOWED_ORIGIN": {
+      "description": "It configures the Access-Control-Allow-Origin CORS.",
+      "required": false
+    },
+    "TOM_API_KEY": {
+      "description": "It protects your API using the key provided",
+      "required": false
+    }
+  }
+}
