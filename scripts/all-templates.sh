@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 tom --command=notification.email --templateId=welcome --to=leo@hyperping.io --username=Leo
 tom --command=notification.email --templateId=reset --to=leo@hyperping.io --username=Leo
 tom --command=notification.email --templateId=site_up --to=leo@hyperping.io --username=Leo --domain=api.microlink.io
