@@ -48,7 +48,7 @@ email:
         outro: 'If you did not request a password reset, no further action is required on your part.'
 
     site_up:
-      subject: "[{company.site}] UPTIME for {props.site} 👍"
+      subject: "[{company.site}] UPTIME for {props.domain} 👍"
       from: "{company.email}"
       bcc: "{company.email}"
       body:
@@ -70,7 +70,7 @@ email:
             link: ' https://hyperping.io/2734'
 
     site_down:
-      subject: "[{company.site}] DOWNTIME for {props.site} 👎"
+      subject: "[{company.site}] DOWNTIME for {props.domain} 👎"
       from: "{company.email}"
       bcc: "{company.email}"
       body:
