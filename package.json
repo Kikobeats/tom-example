@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": {
-    "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
     "url": "https://kikobeats.com"
   },
   "repository": {
@@ -47,7 +47,6 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr node_modules/tom-microservice/src/routes --port 1337",
     "lint": "standard-markdown && standard",
-    "precommit": "lint-staged",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin,scripts}/**/*.js --single-quote --print-width 100",
     "start": "NODE_ENV=production tom --silent",
@@ -67,5 +66,10 @@
       "standard-markdown",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
