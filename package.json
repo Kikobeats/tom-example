@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
   "repository": {
@@ -22,9 +22,9 @@
     "tom"
   ],
   "dependencies": {
-    "config": "~1.30.0",
-    "express": "~4.16.3",
-    "tom-microservice": "github:kikobeats/tom-microservice"
+    "config": "latest",
+    "express": "latest",
+    "tom-microservice": "latest"
   },
   "devDependencies": {
     "coveralls": "latest",
@@ -42,17 +42,27 @@
   "engines": {
     "node": ">= 8"
   },
+  "files": [
+    "bin",
+    "config",
+    "tom.config.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "svr node_modules/tom-microservice/src/routes --port 1337",
+    "dev": "TZ=UTC NODE_ENV=development svr bin/server-dev --port 1337",
     "lint": "standard-markdown && standard",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin,scripts}/**/*.js --single-quote --print-width 100",
-    "start": "NODE_ENV=production tom --silent",
+    "start": "TZ=UTC NODE_ENV=production node bin/server",
     "test": "nyc mocha"
   },
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "package.json": [
       "finepack",
@@ -66,10 +76,5 @@
       "standard-markdown",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

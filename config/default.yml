@@ -2,7 +2,7 @@ company:
   name: tom microservice
   site: hyperping.io
   link: https://hyperping.io
-  logo: https://hyperping.io/assets/signallogo3.svg
+  logo: https://i.imgur.com/jv8Zcab.png
   email: hello@hyperping.io
   copyright: Copyright © 2018 Hyperping. All rights reserved.
 
@@ -11,6 +11,9 @@ email:
     host: smtp.ethereal.email
     port: 587
     secure: false
+    auth:
+      user: bennie14@ethereal.email
+      pass: H7nFwcNCcK8rCs66Zd
 
   theme: salted
   template:
@@ -24,7 +27,7 @@ email:
         action:
           instructions: 'To get started with {company.site}, please click here:'
           button:
-            color: "#22BC66"
+            color: "#3657ff"
             text: Confirm your account
             link: https://hyperping.io/confirm?s=d9729feb74992cc3482b350163a1a010
 
@@ -42,7 +45,7 @@ email:
         action:
           instructions: "Click the button below to reset your password:"
           button:
-            color: '#DC4D2F'
+            color: '#3657ff'
             text: 'Reset your password'
             link: 'https://hyperping.io/creset?s=d9729feb74992cc3482b350163a1a010'
         outro: 'If you did not request a password reset, no further action is required on your part.'
@@ -65,7 +68,7 @@ email:
         action:
           instructions: "Click the button below to see more details"
           button:
-            color: '#22BC66'
+            color: '#3657ff'
             text: 'See more details'
             link: ' https://hyperping.io/2734'
 
@@ -87,7 +90,7 @@ email:
         action:
           instructions: "Click the button below to see more details"
           button:
-            color: '#22BC66'
+            color: '#3657ff'
             text: 'See more details'
             link: ' https://hyperping.io/2734'
 
@@ -128,6 +131,6 @@ email:
         action:
           instructions: "Click the button below to see more details"
           button:
-            color: '#22BC66'
+            color: '#3657ff'
             text: 'See more details'
             link: ' https://hyperping.io/2734'

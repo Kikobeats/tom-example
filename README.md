@@ -1,6 +1,6 @@
 # tom-example
 
-![](https://i.imgur.com/O7GN5Pw.png)
+![](https://i.imgur.com/9j6sMh2.png)
 
 > backoffice microservice example powered by [tom-microservice](http://tom.js.org/).
 
