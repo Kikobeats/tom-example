@@ -1,7 +1,7 @@
 {
   "name": "tom-example",
-  "description": "A tom microservice example",
-  "homepage": "https://documentup.com/Kikobeats/tom-example",
+  "description": "Example Tom microservice showing payments, subscriptions, email, and notification handlers.",
+  "homepage": "https://github.com/Kikobeats/tom-example",
   "version": "0.0.0",
   "main": "index.js",
   "author": {
@@ -17,8 +17,15 @@
     "url": "https://github.com/Kikobeats/tom-example/issues"
   },
   "keywords": [
+    "api",
+    "demo",
+    "email",
     "example",
     "microservice",
+    "notifications",
+    "payments",
+    "stripe",
+    "subscriptions",
     "tom"
   ],
   "dependencies": {
@@ -31,10 +38,9 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "husky": "latest",
-    "lint-staged": "latest",
+    "nano-staged": "latest",
     "nyc": "latest",
-    "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "svr": "latest"
@@ -58,23 +64,21 @@
     "test": "nyc mocha"
   },
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
+  "nano-staged": {
+    "*.js": [
+      "git add",
+      "prettier-standard"
+    ],
+    "*.md": [
+      "git add",
+      "standard-markdown"
+    ],
     "package.json": [
       "finepack",
       "git add"
-    ],
-    "*.js": [
-      "prettier-standard",
-      "git add"
-    ],
-    "*.md": [
-      "standard-markdown",
-      "git add"
     ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "nano-staged"
   }
 }
